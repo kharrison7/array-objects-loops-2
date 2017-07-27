@@ -92,11 +92,11 @@ Answer: This function should output the string "*\n**\n***\n****\n*****\n"
 
 function printTriangle(){
 
-  let rows = "*";
+  // let rows = "*";
   let tri = "";
   let total = '';
   for(let i = 0; i < 5; i++){
-  tri = tri + rows;
+  tri = tri + '*';
   total = total + tri + '\n';
   // console.log(tri);
   }
