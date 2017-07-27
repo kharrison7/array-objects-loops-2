@@ -131,7 +131,21 @@ let matrix = [
     [ "g", "h", "i" ]
 ];
 
+let newMatrix = [
+      [ "a", "b", "c" ],
+      [ "d", "e", "f" ],
+      [ "g", "h", "i" ]
+  ];
+  console.log("matrix is " + matrix);
+  console.log("newMatrix is " + newMatrix);
+
 function transpose(){
-    let newMatrix = [];
-    // Your answer goes here:
+  for(let i = 0; i < matrix.length; i++){
+  console.log("runs");
+
+  for(let n = 0; n < matrix[0].length; n++){
+  newMatrix[i][n] = matrix[n][i];
+  }
+ }
+ return newMatrix;
 }
