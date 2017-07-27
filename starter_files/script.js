@@ -17,12 +17,11 @@ let numberArray = [ 23, 234, 64 , 89, 2, 756, 3, 58, 674, 32, 756, 23, 6 ];
 
 function getBigNumber(){
   let sum = 0;
-  let ex = [];
   for( let i = 0; i < numberArray.length; i++){
-    ex[i]= numberArray[i] * i;
+    numberArray[i] =  numberArray[i] * i;
   }
   for( let i = 0; i < numberArray.length; i++){
-    sum += ex[i];
+    sum += numberArray[i];
   }
   return sum;
     // Your answer goes here:
@@ -51,6 +50,19 @@ let people = [
 
 function checkPeopleStatus(){
     // Your answer goes here:
+
+    for( let i = 0; i < people.length; i++){
+      if (people[i].age < 18){
+         people[i].status = 'minor';
+      }
+      else if(people[i].age > 65){
+        people[i].status = 'senior';
+      }
+      else{
+        people[i].status =  'adult';
+      }
+    }
+    return people;
 }
 
 
@@ -79,7 +91,16 @@ Answer: This function should output the string "*\n**\n***\n****\n*****\n"
 */
 
 function printTriangle(){
-    // Your answer goes here:
+
+  let rows = "*";
+  let tri = "";
+  let total = '';
+  for(let i = 0; i < 5; i++){
+  tri = tri + rows;
+  total = total + tri + '\n';
+  // console.log(tri);
+  }
+  return total;
 }
 
 /*
